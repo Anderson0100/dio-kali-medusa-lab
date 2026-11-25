@@ -10,22 +10,22 @@ docs/02-testes.md: comandos e procedimentos de reprodução.
 docs/01-ambiente.md: instalação e configuração das VMs.
 docs/04-entrega.md: endereço e descrição para a entrega na DIO.
 docs/05-evidencias.md: seleção dos prints e motivos dos descartes.
-images/: dez PNGs originais e manifesto com nomes de origem e hashes.
+images/: 13 PNGs originais e manifesto com nomes de origem e hashes.
 scripts/: duas versões Python de reprodução do exercício DVWA Low.
 wordlists/: listas pequenas utilizadas no laboratório.
 
 IMAGENS E LIMITES
-Das 19 imagens de fotos.zip, foram selecionadas nove evidências principais
-mais uma captura de kernel panic. Somente os nomes foram padronizados.
+Foram selecionadas dez imagens de fotos.zip e três de aff.zip, totalizando
+13 capturas. Somente os nomes foram padronizados.
 Os ACCOUNT FOUND de FTP e SMB estão preservados.
-Os prints do DVWA não foram recebidos em um arquivo utilizável; os resultados
-vistos anteriormente permanecem transcritos, com essa limitação explícita.
+O DVWA está documentado com três prints: tentativa manual recusada, login
+confirmado no navegador e sucesso na terceira candidata da automação.
 Os logs brutos do Kali também não foram recebidos.
 
 Após a recriação do ambiente de montagem, a documentação foi recomposta e
 os scripts foram reconstituídos a partir do procedimento documentado.
 Eles foram verificados localmente, sem nova execução contra as VMs.
-As imagens foram recuperadas diretamente do ZIP original, sem edições.
+As imagens foram recuperadas diretamente dos ZIPs recebidos, sem edições.
 
 COMO ENTREGAR
 1. Confira o README e o relatório no GitHub.

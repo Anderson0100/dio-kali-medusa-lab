@@ -1,9 +1,11 @@
 # Capturas originais
 
-Dez PNGs foram selecionados dos 19 arquivos de fotos.zip: nove evidências principais e uma de dificuldade de inicialização. Somente os nomes foram alterados; os bytes são idênticos aos recebidos.
+Esta pasta contém **13 PNGs** selecionados dos arquivos enviados pelo participante: dez de fotos.zip e três de aff.zip. Eles documentam o ambiente, os resultados de FTP, DVWA e SMB e uma dificuldade de inicialização.
 
-- [Manifesto com nomes de origem, dimensões, hashes SHA-256 e legendas](manifesto.csv)
+Somente os nomes foram padronizados; os bytes são idênticos aos arquivos recebidos. Os prints do DVWA mostram a tentativa manual recusada, o acesso confirmado no navegador e a automação com sucesso na terceira candidata.
+
+- [Manifesto com ZIP de origem, nomes, dimensões, SHA-256 e legendas](manifesto.csv)
 - [Seleção e motivos dos descartes](../docs/05-evidencias.md)
 - [Relatório com as imagens](../docs/03-relatorio.md)
 
-Os prints do DVWA não constam do ZIP recebido. Não foram produzidas imagens substitutas ou logs artificiais.
+Não foram produzidas imagens substitutas ou logs artificiais. Os logs brutos não foram recebidos.

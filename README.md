@@ -7,7 +7,7 @@
 
 Projeto de estudo em VirtualBox: reconhecimento de serviços, testes de dicionário em FTP e DVWA, enumeração SMB e uma rodada de password spraying. O alvo foi a VM Metasploitable 2 do participante, em rede Host-only.
 
-> **Três cenários documentados e dez capturas originais incorporadas.** FTP e SMB têm evidências visuais de identificação e confirmação de credenciais. Os resultados do DVWA foram vistos anteriormente na conversa e estão transcritos, mas seus prints não constam de fotos.zip. Os logs brutos não foram recebidos. Medidas defensivas são recomendações, sem aplicação ou reteste.
+> **Três cenários documentados e 13 capturas originais incorporadas.** FTP, DVWA e SMB têm evidências visuais de identificação e confirmação de credenciais. O DVWA inclui a tentativa manual recusada, o acesso confirmado no navegador e a automação com sucesso na terceira candidata. Os logs brutos não foram recebidos. Medidas defensivas são recomendações, sem aplicação ou reteste.
 
 ## Resultados principais
 
@@ -63,7 +63,7 @@ docs/
 images/
   README.md
   manifesto.csv
-  *.png                 # Dez imagens originais
+  *.png                 # 13 imagens originais
 scripts/
   dvwa_guiado.py         # Biblioteca padrão; alvo fixo e até três candidatas
   dvwa_lab.py            # Alternativa parametrizável, limitada a IPv4 RFC1918
@@ -79,9 +79,9 @@ resultados/
 
 Medusa foi usado em FTP e SMB. O exercício web usou Python para tratar a sessão e classificar marcadores explícitos. A versão guiada foi a utilizada na execução observada; a alternativa parametrizável é um recurso de reprodução.
 
-**Nota sobre os arquivos desta publicação:** após a recriação do ambiente de montagem, a documentação foi recomposta a partir dos registros da conversa e os PNGs foram recuperados diretamente do ZIP original. Os scripts foram reconstituídos para reproduzir o procedimento descrito e verificados com respostas simuladas; não são apresentados como cópias binárias dos arquivos executados anteriormente no Kali. Não houve nova execução contra as VMs durante a publicação. Os resultados históricos e as imagens permanecem separados dessas verificações locais.
+**Nota sobre os arquivos desta publicação:** após a recriação do ambiente de montagem, a documentação foi recomposta a partir dos registros da conversa e os PNGs foram recuperados diretamente dos ZIPs enviados pelo participante. Os scripts foram reconstituídos para reproduzir o procedimento descrito e verificados com respostas simuladas; não são apresentados como cópias binárias dos arquivos executados anteriormente no Kali. Não houve nova execução contra as VMs durante a publicação. Os resultados históricos e as imagens permanecem separados dessas verificações locais.
 
-**Verificação desta publicação:** 14 verificações locais com respostas simuladas passaram, cobrindo sucesso, falha, sessão/página inesperada, ambiguidade, limites, redirecionamentos, erros e parada no sucesso. Links internos e hashes das dez imagens também foram conferidos. Nenhuma dessas verificações acessou o alvo.
+**Verificação desta publicação:** 14 verificações locais com respostas simuladas passaram, cobrindo sucesso, falha, sessão/página inesperada, ambiguidade, limites, redirecionamentos, erros e parada no sucesso. Links internos e hashes das 13 imagens também foram conferidos. Nenhuma dessas verificações acessou o alvo.
 
 ## Prevenção e limites
 

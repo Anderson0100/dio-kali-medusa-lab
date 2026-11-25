@@ -5,7 +5,7 @@
 **Data nas capturas dos testes:** 23/11/2026; relógio e fuso da VM não confirmados.  
 **Organização:** 25/11/2026.
 
-FTP, DVWA e SMB foram executados nas VMs do participante. Os resultados abaixo foram transcritos das capturas enviadas durante o estudo; os testes não foram executados no ambiente do assistente. Dez imagens de fotos.zip estão incorporadas sem alteração de conteúdo. Os logs completos não foram recebidos. Os prints do DVWA, vistos anteriormente na conversa, não constam do ZIP.
+FTP, DVWA e SMB foram executados nas VMs do participante. Os resultados abaixo foram transcritos das capturas enviadas durante o estudo; os testes não foram executados no ambiente do assistente. Treze imagens estão incorporadas sem alteração de conteúdo: dez de fotos.zip e três de aff.zip, incluindo as evidências do DVWA. Os logs completos não foram recebidos.
 
 A [seleção das evidências](05-evidencias.md) registra arquivos incluídos e descartados. O [manifesto](../images/manifesto.csv) relaciona nomes de origem e hashes. Blocos de saída são transcrições, não arquivos de log originais. A documentação foi recomposta após a recriação do ambiente de montagem; os scripts publicados foram reconstituídos e verificados localmente, sem repetição dos testes nas VMs.
 
@@ -125,7 +125,7 @@ ftp> quit
 
 ## 3. DVWA Low: formulário e automação
 
-> **Limite documental:** os prints desta etapa foram observados anteriormente na conversa, mas não estão entre os 19 PNGs de fotos.zip. Esta seção preserva as transcrições; não há imagens substitutas.
+As três capturas abaixo foram recebidas em aff.zip e preservadas sem edição. Elas mostram os resultados manuais no nível Low e a execução posterior do script. Os blocos de texto são transcrições dessas imagens; o log bruto não foi recebido.
 
 **Hipótese:** o exercício Brute Force no nível Low aceita tentativas sem controle suficiente. O caminho foi http://192.168.56.103/dvwa/vulnerabilities/brute/ e o usuário admin. A página inicialmente estava em high; os resultados abaixo foram observados após a mudança para low.
 
@@ -135,6 +135,14 @@ Primeiro foram realizadas duas tentativas manuais no Firefox, dentro de uma sess
 | --- | --- |
 | admin / 123456 | Username and/or password incorrect. |
 | admin / password | Welcome to the password protected area admin |
+
+**Evidência 7 — Tentativa manual recusada no nível Low.** A URL registra admin/123456 e a página mostra a mensagem de erro.
+
+![DVWA Low recusando a credencial admin com senha 123456](../images/07a-dvwa-falha-manual.png)
+
+**Evidência 8 — Acesso confirmado manualmente no nível Low.** A URL registra admin/password e o formulário exibe a mensagem da área protegida.
+
+![DVWA Low confirmando acesso à área protegida de admin](../images/07-dvwa-validacao.png)
 
 A barra de endereço mostrou parâmetros GET username, password e Login. Posteriormente, foi executada a automação com a lista 123456, admin e password:
 
@@ -153,9 +161,13 @@ Tentativa 3: SUCESSO
 Senha da linha 3 aceita pelo modulo.
 ```
 
+**Evidência 9 — Automação concluída com sucesso na terceira candidata.** A mesma captura mostra a execução inicial interrompida pelo formato do cookie e a execução seguinte concluída. Abra a imagem para visualizar o terminal em tamanho original.
+
+![Script do DVWA com duas falhas e sucesso na terceira candidata](../images/06-dvwa-tentativas.png)
+
 **Resultado: sucesso automatizado na terceira candidata, mesma credencial previamente confirmada manualmente.** A terceira linha preparada é password. A ordem foi validação manual e depois automação.
 
-O valor do cookie não apareceu na captura e não foi recebido. O comando usa tee sem -a, portanto a segunda execução substituiu o log anterior; a imagem vista na conversa mostrava ambas. O arquivo bruto do log não foi recebido.
+O valor do cookie não apareceu na captura e não foi recebido. O comando usa tee sem -a, portanto a segunda execução substituiu o log anterior; a imagem incorporada mostra ambas. O arquivo bruto do log não foi recebido.
 
 Os resultados se limitam a três candidatas, ao nível Low e ao exercício dentro de uma sessão já autenticada. Não comprovam comportamento sob grande volume ou proteção de outros níveis. Os scripts reconstituídos nesta publicação foram verificados apenas com respostas simuladas; os registros acima são os resultados históricos observados, não uma nova execução desses arquivos.
 
@@ -178,7 +190,7 @@ enum4linux complete on Mon Nov 23 12:52:34 2026
 
 Esses três nomes foram escolhidos para a wordlist. A lista parcial não estabelece o total de contas nem garante que todas tenham login SMB habilitado.
 
-**Evidência 7 — Usuários enumerados.** Abra a imagem para visualizar o terminal em tamanho original.
+**Evidência 10 — Usuários enumerados.** Abra a imagem para visualizar o terminal em tamanho original.
 
 ![enum4linux com msfadmin, service e ftp](../images/08-smb-enumeracao.png)
 
@@ -200,7 +212,7 @@ O Medusa retornou um ACCOUNT CHECK para cada usuário e a linha:
 
 Para service e ftp houve ACCOUNT CHECK sem indicação visível de sucesso. Os três registros exibem o mesmo segundo, o que não permite medir duração precisa nem concluir sobre limites de taxa. Não foram observadas novas rodadas.
 
-**Evidência 8 — Spraying e primeira tentativa de confirmação.** A captura preserva ACCOUNT FOUND e, abaixo, um erro de outro comando, o rpcclient.
+**Evidência 11 — Spraying e primeira tentativa de confirmação.** A captura preserva ACCOUNT FOUND e, abaixo, um erro de outro comando, o rpcclient.
 
 ![Spraying SMB com sucesso e primeira consulta RPC com BAD SIG](../images/09-smb-spray.png)
 
@@ -236,7 +248,7 @@ Password for [WORKGROUP\msfadmin]:
 Account Name: msfadmin, Authority Name: VULNERABILITY
 ```
 
-**Evidência 9 — Identidade confirmada pelo servidor.**
+**Evidência 12 — Identidade confirmada pelo servidor.**
 
 ![rpcclient retornando msfadmin e autoridade VULNERABILITY](../images/10-smb-validacao.png)
 
@@ -268,15 +280,15 @@ Uma extensão pode aplicar uma alteração por vez em cópia/snapshot e repetir 
 2. Sessão expirada, formato inválido de cookie, erro de rede e senha recusada precisam de classificações distintas.
 3. O aviso de DNS não impediu a varredura por IP; o erro de assinatura RPC exigiu diagnóstico antes de confirmar a identidade.
 4. A indicação da ferramenta foi complementada por confirmação independente em cada cenário observado.
-5. Dez PNGs originais estão incluídos; prints do DVWA e logs brutos não foram recebidos. Fuso da VM, versão final do VirtualBox e snapshots não foram confirmados.
+5. Treze PNGs originais estão incluídos, com evidências dos três cenários. Os logs brutos não foram recebidos. Fuso da VM, versão final do VirtualBox e snapshots não foram confirmados.
 6. As defesas são recomendações. Nenhum comportamento esperado foi apresentado como reteste executado.
 
 ## 7. Conferência da entrega
 
-- [x] Dez imagens originais selecionadas, renomeadas e acompanhadas de legendas.
+- [x] Treze imagens originais selecionadas, renomeadas e acompanhadas de legendas.
 - [x] Manifesto com nomes de origem, dimensões e SHA-256.
 - [x] Observações, hipóteses e recomendações diferenciadas.
-- [x] Ausência dos prints do DVWA e dos logs brutos declarada.
+- [x] Evidências do DVWA incorporadas e ausência dos logs brutos declarada.
 - [x] Scripts reconstituídos identificados separadamente dos resultados históricos.
 - [ ] Revisão final do autor antes da entrega na DIO.
 - [ ] Envio do endereço do repositório na plataforma DIO.

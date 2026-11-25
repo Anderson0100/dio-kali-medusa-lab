@@ -1,11 +1,14 @@
-﻿arquivo,origem_no_zip,largura,altura,sha256,legenda
-00-rede-host-only.png,fotos/Captura de tela 2026-11-23 133809.png,1192,627,bc9d53065b25390c14df4887c5512858be49f75cf0df9e041ade3eb869b8c80c,Configuração do alvo com adaptador Host-only.
-01-meta-ip.png,fotos/Captura de tela 2026-11-23 140248.png,873,566,d75ea53f548acd990f37b9d068ea56d4bd5d2c211428b1936a7f4dd2e6188173,IPv4 do Metasploitable: 192.168.56.103/24.
-02-kali-conectividade.png,fotos/Captura de tela 2026-11-23 140957.png,828,707,c210e8f6a8200058f35a977bcb4207d109f0195b75c36bb319de21e7bca4c602,Kali 192.168.56.101/24 e ping para o alvo com três respostas.
-03-nmap-servicos.png,fotos/Captura de tela 2026-11-23 141346.png,881,718,005cd62d3cc0f8c6ee2e3d0f43515096cc516277c1dd2bc41102b504add112c2,"Nmap: portas 21, 80, 139 e 445 abertas."
-04-ftp-medusa.png,fotos/Captura de tela 2026-11-23 141625.png,831,693,c94bdad4927726241de3dd5d975ce6a42620d4c609ada5d10dda73be2fe9aa56,Medusa FTP: ACCOUNT FOUND para msfadmin/msfadmin.
-05-ftp-validacao.png,fotos/Captura de tela 2026-11-23 142527.png,830,700,922f98320398604c534a2591a343f4c410589f220ac856b039b1e7e2047ebda7,Login FTP confirmado e diretório /home/msfadmin.
-08-smb-enumeracao.png,fotos/Captura de tela 2026-11-23 145343.png,1919,1034,667cda60e76836209159ed2e914a15b98e6b565170162f310452d783da7574e5,"Enumeração com msfadmin, service e ftp."
-09-smb-spray.png,fotos/Captura de tela 2026-11-23 150539.png,686,532,185c70efe004f545283ab14c38f58f31dd516964da39d1ec9b5bbe206a6856e0,Spraying SMB com sucesso e primeira consulta RPC com BAD SIG.
-10-smb-validacao.png,fotos/Captura de tela 2026-11-23 150950.png,694,196,d2778d7a86b4a49421e29c16d57eadd5efdc901848f604071de424529e5008d8,RPC: Account Name msfadmin; Authority Name VULNERABILITY.
-12-kernel-panic.png,fotos/Captura de tela 2026-11-23 131009.png,730,475,5136b12dfcd386d556ccbe4ef70826f985828c0412d75748f7ea6cb5c182d1fc,Registro complementar de kernel panic na preparação.
+﻿arquivo,arquivo_zip,origem_no_zip,largura,altura,sha256,legenda
+00-rede-host-only.png,fotos.zip,fotos/Captura de tela 2026-11-23 133809.png,1192,627,bc9d53065b25390c14df4887c5512858be49f75cf0df9e041ade3eb869b8c80c,Configuração do alvo com adaptador Host-only.
+01-meta-ip.png,fotos.zip,fotos/Captura de tela 2026-11-23 140248.png,873,566,d75ea53f548acd990f37b9d068ea56d4bd5d2c211428b1936a7f4dd2e6188173,IPv4 do Metasploitable: 192.168.56.103/24.
+02-kali-conectividade.png,fotos.zip,fotos/Captura de tela 2026-11-23 140957.png,828,707,c210e8f6a8200058f35a977bcb4207d109f0195b75c36bb319de21e7bca4c602,Kali 192.168.56.101/24 e ping para o alvo com três respostas.
+03-nmap-servicos.png,fotos.zip,fotos/Captura de tela 2026-11-23 141346.png,881,718,005cd62d3cc0f8c6ee2e3d0f43515096cc516277c1dd2bc41102b504add112c2,"Nmap: portas 21, 80, 139 e 445 abertas."
+04-ftp-medusa.png,fotos.zip,fotos/Captura de tela 2026-11-23 141625.png,831,693,c94bdad4927726241de3dd5d975ce6a42620d4c609ada5d10dda73be2fe9aa56,Medusa FTP: ACCOUNT FOUND para msfadmin/msfadmin.
+05-ftp-validacao.png,fotos.zip,fotos/Captura de tela 2026-11-23 142527.png,830,700,922f98320398604c534a2591a343f4c410589f220ac856b039b1e7e2047ebda7,Login FTP confirmado e diretório /home/msfadmin.
+06-dvwa-tentativas.png,aff.zip,"aff/Imagem do ChatGPT 25 de nov. de 2026, 15_24_06.png",1919,1034,4461a16a483c0dcf64018475d0b6a84fd969691aa5db1bd4d1f20fb649e3eeba,Execução de dvwa_guiado.py: duas falhas e sucesso na terceira candidata; entrada anterior de PHPSESSID recusada antes das requisições.
+07-dvwa-validacao.png,aff.zip,"aff/Imagem do ChatGPT 25 de nov. de 2026, 15_24_23.png",1919,1030,ce6498c85807df1b06a2e54124bc7996743aba14b23cb06d3dfa02f7aa7386d3,DVWA Low: admin/password aceito e mensagem Welcome to the password protected area admin.
+07a-dvwa-falha-manual.png,aff.zip,"aff/Imagem do ChatGPT 25 de nov. de 2026, 15_24_32.png",1919,1030,53a39a0e74d05e75ed40dfbcf7ae6480bc12451cee0c2c4e8e2a124ac2b98fc4,DVWA Low: admin/123456 recusado com Username and/or password incorrect.
+08-smb-enumeracao.png,fotos.zip,fotos/Captura de tela 2026-11-23 145343.png,1919,1034,667cda60e76836209159ed2e914a15b98e6b565170162f310452d783da7574e5,"Enumeração com msfadmin, service e ftp."
+09-smb-spray.png,fotos.zip,fotos/Captura de tela 2026-11-23 150539.png,686,532,185c70efe004f545283ab14c38f58f31dd516964da39d1ec9b5bbe206a6856e0,Spraying SMB com sucesso e primeira consulta RPC com BAD SIG.
+10-smb-validacao.png,fotos.zip,fotos/Captura de tela 2026-11-23 150950.png,694,196,d2778d7a86b4a49421e29c16d57eadd5efdc901848f604071de424529e5008d8,RPC: Account Name msfadmin; Authority Name VULNERABILITY.
+12-kernel-panic.png,fotos.zip,fotos/Captura de tela 2026-11-23 131009.png,730,475,5136b12dfcd386d556ccbe4ef70826f985828c0412d75748f7ea6cb5c182d1fc,Registro complementar de kernel panic na preparação.
