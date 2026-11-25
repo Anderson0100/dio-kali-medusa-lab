@@ -1,0 +1,38 @@
+PROJETO DIO — KALI LINUX E MEDUSA
+Autor: Anderson Junior
+Bootcamp: Santander - Cibersegurança do Zero à Prática
+Repositório: https://github.com/Anderson0100/dio-kali-medusa-lab
+
+CONTEÚDO
+README.md: apresentação e resumo dos resultados.
+docs/03-relatorio.md: relatório dos testes, com imagens e legendas.
+docs/02-testes.md: comandos e procedimentos de reprodução.
+docs/01-ambiente.md: instalação e configuração das VMs.
+docs/04-entrega.md: endereço e descrição para a entrega na DIO.
+docs/05-evidencias.md: seleção dos prints e motivos dos descartes.
+images/: dez PNGs originais e manifesto com nomes de origem e hashes.
+scripts/: duas versões Python de reprodução do exercício DVWA Low.
+wordlists/: listas pequenas utilizadas no laboratório.
+
+IMAGENS E LIMITES
+Das 19 imagens de fotos.zip, foram selecionadas nove evidências principais
+mais uma captura de kernel panic. Somente os nomes foram padronizados.
+Os ACCOUNT FOUND de FTP e SMB estão preservados.
+Os prints do DVWA não foram recebidos em um arquivo utilizável; os resultados
+vistos anteriormente permanecem transcritos, com essa limitação explícita.
+Os logs brutos do Kali também não foram recebidos.
+
+Após a recriação do ambiente de montagem, a documentação foi recomposta e
+os scripts foram reconstituídos a partir do procedimento documentado.
+Eles foram verificados localmente, sem nova execução contra as VMs.
+As imagens foram recuperadas diretamente do ZIP original, sem edições.
+
+COMO ENTREGAR
+1. Confira o README e o relatório no GitHub.
+2. Na DIO, abra o desafio e selecione Entregar Projeto.
+3. Cole o endereço do repositório e use a descrição de docs/04-entrega.md.
+A entrega na DIO ainda precisa ser concluída pelo autor.
+
+As recomendações defensivas não foram implementadas nem retestadas.
+Não é necessário ligar as VMs para ler os arquivos ou entregar o link.
+Desligue-as normalmente e preserve os discos virtuais.

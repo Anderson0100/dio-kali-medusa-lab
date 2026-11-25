@@ -1,0 +1,15 @@
+resultados/*
+!resultados/README.md
+*.log
+*.pcap
+*.pcapng
+*.har
+*.cookie
+cookies*.txt
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
